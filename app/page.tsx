@@ -105,11 +105,11 @@ export default function Home() {
   if (!mounted) return null;
 
   return (
-    <main className="flex min-h-screen bg-stone-100 items-start justify-center p-8 font-sans">
+    <main className="flex flex-col md:flex-row min-h-screen bg-stone-100 items-center md:items-start justify-center p-4 md:p-8 font-sans gap-8">
       
       {/* --- 左側：3D盤面エリア --- */}
       <div 
-        className={`w-[650px] h-[650px] rounded-3xl shadow-2xl border-[16px] sticky top-8 transition-all duration-500 overflow-hidden bg-white
+        className={`w-full max-w-[650px] aspect-square rounded-3xl shadow-2xl border-[8px] md:border-[16px] sticky top-0 md:top-8 transition-all duration-500 overflow-hidden bg-white
         ${isGameOver ? 'border-stone-400' : currentPlayer === 1 ? 'border-[#8b4513]' : 'border-[#556b2f]'}`}
       >
         {/* 3Dシーンを呼び出し。boardデータとクリック関数を渡す */}
