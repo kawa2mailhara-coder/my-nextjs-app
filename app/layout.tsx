@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body style={{ margin: 0, display: 'flex', flexDirection: 'column', height: '100vh' }}>
+      <body className="min-h-screen">
         
         {/* --- サイト全体の共通ヘッダー --- */}
         <header style={{
