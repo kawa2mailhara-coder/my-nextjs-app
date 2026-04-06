@@ -72,13 +72,13 @@ export default function Home() {
           const isMatch = () => {
             let currentShape = card.shape;
             for (let rot = 0; rot < 4; rot++) {
-              currentShape = currentShape.map(([row, col]) => [col, -row]);
-              const variants = [currentShape, currentShape.map(([row, col]) => [row, -col])];
+              currentShape = currentShape.map(([row, col]: number[]) => [col, -row]);
+              const variants = [currentShape, currentShape.map(([row, col]: number[]) => [row, -col])];
               for (const s of variants) {
-                const minR = Math.min(...s.map(p => p[0]));
-                const minC = Math.min(...s.map(p => p[1]));
-                const norm = s.map(([row, col]) => [row - minR, col - minC]);
-                const check = (p: string[]) => norm.every((off, i) => board[`${r + off[0]}-${c + off[1]}`] === p[i]);
+                const minR = Math.min(...s.map((p: number[]) => p[0]));
+                const minC = Math.min(...s.map((p: number[]) => p[0]));
+                const norm = s.map(([row, col]: number[]) => [row - minR, col - minC]);
+                const check = (p: string[]) => norm.every((off: number[], i: number) => board[`${r + off[0]}-${c + off[1]}`] === p[i]);
                 if (check(card.pattern) || check([...card.pattern].reverse())) return true;
               }
             }
