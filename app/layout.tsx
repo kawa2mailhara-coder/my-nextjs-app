@@ -25,30 +25,6 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="min-h-screen">
-        
-        {/* --- サイト全体の共通ヘッダー --- */}
-        <header style={{
-          height: '60px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center', // これで中身を水平中央に寄せます
-          padding: '0 2rem',
-          backgroundColor: '#fff',
-          borderBottom: '1px solid #e5e7eb',
-          position: 'relative',    // 左右に何か置きたくなった時のための基準
-          zIndex: 1000,
-        }}>
-          <h1 style={{ 
-            fontSize: '1.4rem', 
-            margin: 0, 
-            color: '#2d5a27', 
-            fontFamily: 'serif',
-            letterSpacing: '0.15em',
-            fontWeight: 'bold',
-          }}>
-            GARDEN MEISTER
-          </h1>
-        </header>
 
         {/* --- ここに各ページ（GardenSceneなど）が入る --- */}
         <main style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
